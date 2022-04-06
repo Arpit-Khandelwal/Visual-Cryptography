@@ -2,8 +2,9 @@ import os
 from PIL import Image
 import numpy
 import sys
-#to load encrypted image
-im = Image.open(os.path.join('C:\\Users\\arpit\\Desktop\\','encrypted.PNG'))
+from pathlib import Path
+
+im = Image.open(os.path.join( str(Path().absolute()),'encrypted.PNG'))
 pix = im.load() #pixels loaded to pix array
 
 def upshift(a,index,n):
@@ -125,5 +126,5 @@ for iterations in range(ITER_MAX):
 for i in range(m):
     for j in range(n):
         pix[i, j] = (r[i][j], g[i][j], b[i][j])
-im.save('C:\\Users\\arpit\\Desktop \\original.PNG')
+im.save( str(Path().absolute())+'\\original.PNG')
 print("Success")

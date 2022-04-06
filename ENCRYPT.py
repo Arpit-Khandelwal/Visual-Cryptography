@@ -3,6 +3,7 @@ from PIL import Image
 from random import randint
 import numpy
 import sys
+from pathlib import Path
 
 
 def upshift(a, index, n):
@@ -33,7 +34,7 @@ def rotate180(n):
 
 
 # loading image from a directory
-im = Image.open(os.path.join("C:\\Users\\arpit\\Desktop\\", "image.png"))
+im = Image.open(os.path.join( Path().absolute() , "image.png"))
 
 pix = im.load()  # converting image to pixels as python object
 
@@ -157,5 +158,5 @@ for iterations in range(ITER_MAX):
 for i in range(m):
     for j in range(n):
         pix[i, j] = (r[i][j], g[i][j], b[i][j])
-im.save("C:\\Users\\arpit\\Desktop\\encrypted.PNG")
+im.save( str(Path().absolute())+"\\encrypted.PNG")
 print("Success")
