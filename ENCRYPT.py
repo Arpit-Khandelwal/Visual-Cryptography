@@ -64,10 +64,10 @@ Kr = [randint(0, pow(2, alpha) - 1) for i in range(m)]
 Kc = [randint(0, pow(2, alpha) - 1) for i in range(n)]
 
 # maximum number of iterations
-ITER_MAX = 1
+ITER_MAX = int(input("Enter value of ITER_MAX: "))
 
-print("Vector Kr : ", Kr)
-print("Vector Kc : ", Kc)
+# print("Vector Kr : ", Kr)
+# print("Vector Kc : ", Kc)
 
 # key for encryption written into the file keys.txt
 f = open("keys.txt", "w+")
@@ -79,6 +79,8 @@ for a in Kc:
     f.write(str(a) + "\n")
 f.write("ITER_MAX :\n")
 f.write(str(ITER_MAX) + "\n")
+
+print("Kr and Kc printed to file")
 
 for iterations in range(ITER_MAX):
     # For each row
