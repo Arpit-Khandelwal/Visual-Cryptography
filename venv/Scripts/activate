@@ -38,7 +38,7 @@ deactivate () {
 # unset irrelevant variables
 deactivate nondestructive
 
-VIRTUAL_ENV="D:\VIT\Winter 21-22\ISM\Proj\venv"
+VIRTUAL_ENV="D:\Coding\Visual-Cryptography\venv"
 export VIRTUAL_ENV
 
 _OLD_VIRTUAL_PATH="$PATH"
